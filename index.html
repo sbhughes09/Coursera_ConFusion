@@ -25,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a type="button" data-toggle="modal" data-target="#loginModal">
+                    <a id="loginBtn" type="button">
                     <span class="fa fa-sign-in"></span>Login </a>
                 </span>
             </div>
@@ -37,7 +37,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button id="closeButton" type="button" class="close">
                         &times;
                     </button>
                 </div>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button id="cancelButton" type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -75,7 +75,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button id="resCloseBtn" type="button" class="close">
                         &times;
                     </button>
                 </div>
@@ -134,7 +134,7 @@
                              <input type="text" class="form-control" placeholder="Time">
                         </div>
                     </div>
-                    <button class="btn btn-secondary" data-dismiss="modal" type="submit">Cancel</button>
+                    <button id="resCancelBtn" class="btn btn-secondary" type="submit">Cancel</button>
                     <button class="btn btn-primary" type="submit">Reserve</button>
                 </form>
             </div>
@@ -153,8 +153,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-sm-3 align-items-center justify-content-center d-flex">
-                   <a type="button" class="btn btn-block nav-link btn-warning"
-                    data-toggle="modal" data-target="#resModal">Reserve Table</a>
+                   <a id="reserveBtn" type="button" class="btn btn-block nav-link btn-warning"
+                    >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -302,21 +302,6 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
  <script>
-        // $(document).ready(function(){
-        //     $("#mycarousel").carousel( { interval: 2000 } );
-        //       $("#carouselButton").click(function(){
-        //         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-        //             $("#mycarousel").carousel('pause');
-        //             $("#carouselButton").children("span").removeClass('fa-pause');
-        //             $("#carouselButton").children("span").addClass('fa-play');
-        //         }
-        //         else if ($("#carouselButton").children("span").hasClass('fa-play')){
-        //             $("#mycarousel").carousel('cycle');
-        //             $("#carouselButton").children("span").removeClass('fa-play');
-        //             $("#carouselButton").children("span").addClass('fa-pause');       
-        //         }
-        //     });
-        // });
 
         $(function() {
             $("#myCarousel").carousel( { interval: 2000 } );
@@ -326,6 +311,8 @@
     });
 });
     </script>
+
+<script src="script.js"></script>
 
 </body>
 
